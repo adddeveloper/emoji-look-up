@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Home || Look Up Emoji(s)</title>
+    <style>
+        @font-face {
+            font-family: comfortaa;
+            src: url(Comfortaa-VariableFont_wght.ttf);
+        }
+        input, h1, strong{
+            font-family: comfortaa;
+        }
+        strong{
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+    
+        input {
+            font-size: 2rem;
+            width: fit-content;
+            text-align: center;
+            outline: none !important;
+            border: solid 1px black;
+            border-radius: none;
+        }
+    
+        #emojiInfo {
+            margin: 2rem 0;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .card{
+            width: 25rem;
+            height: 15rem;
+            border: solid 1px black;
+            height: fit-content;
+            margin: .5rem;
+            padding: .5rem;
+            text-align: left;
+        }
+        #your-element-selector{
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            width: 100%;
+            height: 30rem;
+        }
+        .top{
+            width: 100%;
+            height: 30rem;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .top .contianer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 95%;
+            height: 100%;
+        }
+        .top p, .top h1{
+            text-align: left;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .top h1{
+            font-size: 3rem;
+        }
+        .top p{
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+        }
+
+        @media screen  and (max-width:400px){
+            input{
+                font-size: 1.5rem
+            };
+            .top h1{
+            font-size: 1rem;
+            }
+            .top p{
+                font-size: 1rem;
+                margin: 0 0 1rem 0;
+            }
+        }
+    </style>
+    <style>
+        /* scroll bar */
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+::-webkit-scrollbar-button {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 20px 10px;
+    background: black; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #333; 
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-corner {
+    background: transparent; 
+}
+::-webkit-resizer {
+    background: transparent; 
+}
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <div class="contianer">
+            <h1>Explore Emojis</h1>
+            <p>
+                Uncover emoji meanings, express creatively! 🌟😊🐶🍕📱
+            </p>
+            <input type="text" id="searchInput" placeholder="Search for emojis...">
+            <div id="your-element-selector"></div>
+        </div>
+    </div>
+    <div id="emojiInfo"></div>
+
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <p>©2023 Adnan Hussein</p>
+    </div>
+
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.birds.min.js"></script>
+    <script>
+    VANTA.BIRDS({
+      el: "#your-element-selector",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      birdSize: 3.60,
+      separation: 17.00,
+      alignment: 31.00,
+      cohesion: 27.00,
+      quantity: 1.00
+    })
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>
